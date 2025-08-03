@@ -16,7 +16,7 @@ const NoteDetailPage = () => {
   useEffect(() => {
     async function fetchNote() {
       try {
-        const res = await axios.get(`http://localhost:5001/api/notes/${id}`);
+        const res = await axios.get(`https://oblivo.onrender.com/api/notes/${id}`);
         setNote(res.data);
       } catch (error) {
         console.log(error);

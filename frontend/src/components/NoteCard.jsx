@@ -14,10 +14,10 @@ function formatDate(date) {
 function NoteCard({ note, setNotes }) {
   async function handleDelete(e, id) {
     e.preventDefault();
-    console.log(id);
+    // console.log(id);
     if (!window.confirm("Are you sure you want to delete this?")) return;
     try {
-      await axios.delete(`http://localhost:5001/api/notes/${id}`);
+      await axios.delete(`https://oblivo.onrender.com/api/notes/${id}`);
       toast.success("Note deleted successfully!");
       setNotes((prev) => prev.filter((note) => note._id !== id)); // filter out deleted note
     } catch (error) {
