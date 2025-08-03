@@ -20,7 +20,7 @@ const CreatePage = () => {
     }
     setLoading(true);
     try {
-      await axios.post("http://localhost:5001/api/notes", { title, content });
+      await axios.post("https://oblivo.onrender.com/api/notes", { title, content });
       toast.success("Note created successfully");
       navigate('/');
     } catch (error) {

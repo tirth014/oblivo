@@ -14,7 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/api/notes");
+        const res = await axios.get("http://https://oblivo.onrender.com/api/notes");
         console.log(res.data);
         setNotes(res.data);
         setIsRateLimited(false);
