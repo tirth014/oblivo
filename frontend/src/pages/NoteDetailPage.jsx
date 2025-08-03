@@ -35,7 +35,7 @@ const NoteDetailPage = () => {
     }
     try {
       const res = await axios.put(
-        `http://localhost:5001/api/notes/${id}`,
+        `https://oblivo.onrender.com/api/notes/${id}`,
         note
       );
       toast.success("Note Updated Successfully!");
